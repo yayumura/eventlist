@@ -1,4 +1,4 @@
 # eventlist
 
-##git対象フォルダ
+## git対象フォルダ
 /home/yayumura/eventproject
