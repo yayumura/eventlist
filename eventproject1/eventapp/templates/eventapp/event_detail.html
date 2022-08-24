@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ object.title }}{% endblock %}
+{% block h1 %}イベント詳細{% endblock %}
+
+{% block content %}
+    <div class="p-4 m-4 bg-light border border-success rounded">
+        <h2 class="text-success">{{ object.title }}</h2>
+        <p>{{ object.date }}</p>
+        <p>{{ object.link }}</p>
+        <p>{{ object.category }}</p>
+        <a href="{% url 'list-event' %}" class="btn btn-primary">一覧へ</a>
+        <a href="{% url 'update-event' object.pk %}" class="btn btn-primary">編集する</a>
+        <a href="{% url 'delete-event' object.pk %}" class="btn btn-primary">削除する</a>
+    </div>
+{% endblock %}
